@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  funding-bot:
+    build: .
+    environment:
+      GITHUB_TOKEN: ${GITHUB_TOKEN}
+      GITHUB_REPO: esslinger-co/Funding-Rate-Signal-Bot
+    restart: unless-stopped
+    container_name: funding-rate-bot
